@@ -16,7 +16,6 @@ Original credits go to nicolashery [on Twitter](https://twitter.com/nicolahery)
 - [iTerm2](#iterm2)
 - [Sublime Text](#sublime-text)
 - [Git](#git)
-- [SourceCodePro Font](#sourcecodepro-font)
 - [Vim](#vim)
 - [Python](#python)
 - [Node.js](#nodejs)
@@ -162,15 +161,6 @@ env.sh
     function mkcd() { mkdir -p "$@" && cd "$_"; }
     # Aliases
     alias cppcompile='c++ -std=c++11 -stdlib=libc++'
-
-### Using the SourceCodePro Font
-
-#### iTerm
-Let's go ahead and start by changing the font. In **iTerm > Preferences...**, under the tab **Profiles**, section **Text**, change both fonts to **SourceCodePro-Regular 13pt**.
-
-#### IntelliJ / Webstorm
-
-Go to **Preferences > Editor > Colors & Fonts > Font** and change the font to **SourceCodePro-Regular 15pt**
 
 ## Git
 
