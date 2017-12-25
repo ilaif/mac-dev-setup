@@ -14,7 +14,7 @@ Original credits go to nicolashery [on Twitter](https://twitter.com/nicolahery)
 - [Homebrew](#homebrew)
 - [Oh-my-ZSH Shell](#oh-my-zsh)
 - [iTerm2](#iterm2)
-- [Sublime Text](#sublime-text)
+- [Atom Editor](#atom-editor)
 - [Git](#git)
 - [Vim](#vim)
 - [Python](#python)
@@ -30,9 +30,14 @@ If this is a new computer, there are a couple tweaks I like to make to the Syste
 
 In **Apple Icon > System Preferences**:
 - Trackpad > Tap to click
-- Keyboard > Key Repeat > Fast (all the way to the right)
-- Keyboard > Delay Until Repeat > Short (all the way to the right)
 - Dock > Automatically hide and show the Dock
+
+Run the following to make key repeat, initial key repeat and dock appear faster
+```
+$ defaults write -g InitialKeyRepeat -int 15
+$ defaults write -g KeyRepeat -int 1
+$ defaults write com.apple.dock autohide-time-modifier -float 0.3; killall Dock
+```
 
 ## Google Chrome
 Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/).
@@ -61,9 +66,9 @@ Under the Keys tab select only the first 2 checkboxes under Hotkey and change th
 
 Under the Appearance tab uncheck Hide tab bar when there is only one tab so you can easily drag in and out tabs from the visor.
 
-Under the Profiles tab tweak the Hotkey Window profile to your liking. I use minimal transparency for better readability and Full-Width Left of Screen style so it doesn’t cover SublimeText, which I normally have on the left-side.
+Under the Profiles tab tweak the Hotkey Window profile to your liking. I use minimal transparency for better readability and Full-Width Left of Screen style so it doesn’t cover Atom Editor, which I normally have on the left-side.
 
-Now wherever and whenever you need the console, just press ^\` to open the visor or bring it to the front if it already was. By leaving the 3rd checkbox unselected I’ve set it not to hide when it looses focus so I can keep an eye on logs while I make changes in SublimeText that cause hot-reloads via TiShadow or LiveView.
+Now wherever and whenever you need the console, just press ^\` to open the visor or bring it to the front if it already was. By leaving the 3rd checkbox unselected I’ve set it not to hide when it looses focus so I can keep an eye on logs while I make changes in Atom Editor that cause hot-reloads via TiShadow or LiveView.
 
 [Help Video](https://www.youtube.com/watch?v=ETskRNFeuGM).
 
@@ -132,19 +137,13 @@ chsh -s /bin/zsh
 edit the .zshrc by opening the file in a text editor
 
     ZSH_THEME="af-magic"
-    # Use sublimetext for editing config files
-    alias zshconfig="subl ~/.zshrc"
-    alias envconfig="subl ~/Projects/config/env.sh"
-    plugins=(git sublime zsh-syntax-highlighting brew colored-man pip python virtualenv colorize github osx jira git-flow git-extras npm node theme web-search battery docker docker-compose)
-    # Add env.sh
-    . ~/Projects/config/env.sh
+    # Use atom editor for editing config files
+    alias zshconfig="atom ~/.zshrc"
+    plugins=(git zsh-syntax-highlighting brew colored-man pip python virtualenv colorize github osx git-flow git-extras npm node theme docker docker-compose)
     
-env.sh
-
     #!/bin/zsh
     # PATH
     export PATH="/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-    export EDITOR='subl -w'
     # export PYTHONPATH=$PYTHONPATH
     # export MANPATH="/usr/local/man:$MANPATH"
     # Virtual Environment
@@ -198,10 +197,6 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
 
 [Download it](https://atom.io/download/mac)
 
-## SourceCodePro Font
-
-I really like the SourceCodePro font for coding. Let's install it now.
-
 [Download it](http://www.fontsquirrel.com/fonts/source-code-pro), then open it and double click to install.
 
 ## Vim
@@ -213,7 +208,7 @@ First, install [pathogen.vim](https://github.com/tpope/vim-pathogen) by running:
     $ mkdir -p ~/.vim/autoload ~/.vim/bundle && \
         curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-Then create a file `~/.vimrc` (you can use `$ subl ~/.vimrc`), and paste in the following:
+Then create a file `~/.vimrc` (you can use `$ atom ~/.vimrc`), and paste in the following:
 
     execute pathogen#infect()
     syntax on
