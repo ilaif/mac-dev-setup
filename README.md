@@ -197,8 +197,6 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
 
 [Download it](https://atom.io/download/mac)
 
-[Download it](http://www.fontsquirrel.com/fonts/source-code-pro), then open it and double click to install.
-
 ## Vim
 
 Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). But if you're like me and just use Vim occasionally, you'll be happy to know that [Tim Pope](https://github.com/tpope) has put together some sensible defaults to quickly get started.
