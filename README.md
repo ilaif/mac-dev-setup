@@ -8,7 +8,6 @@ Original credits go to nicolashery [on Twitter](https://twitter.com/nicolahery)
 
 - [System update](#system-update)
 - [System preferences](#system-preferences)
-- [Google Chrome](#google-chrome)
 - [XCode](#xcode)
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
@@ -39,10 +38,9 @@ $ defaults write -g KeyRepeat -int 1
 $ defaults write com.apple.dock autohide-time-modifier -float 0.3; killall Dock
 ```
 
-## Google Chrome
-Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/).
-
 ## Xcode
+Install xcode's cli tool that is required for many dev apps:
+
     $ xcode-select --install
 
 ## iTerm2
